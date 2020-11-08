@@ -45,3 +45,17 @@
     justify-content: flex-start !important;
     text-align: left !important;
 }
+
+.card-title {
+    margin: auto 0 !important;
+}
+
+.card-rows {
+    display: flex;
+}
+
+.page-rows {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
