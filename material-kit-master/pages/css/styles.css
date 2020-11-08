@@ -4,7 +4,6 @@
     justify-content: space-between;
 }
 
-<<<<<<< Updated upstream
 .recipe-list {
     display: flex;
     flex-wrap: wrap;
@@ -45,7 +44,7 @@
     flex-direction: column;
     justify-content: flex-start !important;
     text-align: left !important;
-=======
+}
 #cusine{
     display: none;
 }
@@ -65,7 +64,18 @@
     text-align: center;
     width: 200px;
 }
-.dropdown {
-    
->>>>>>> Stashed changes
+
+
+.card-title {
+    margin: auto 0 !important;
+}
+
+.card-rows {
+    display: flex;
+}
+
+.page-rows {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
