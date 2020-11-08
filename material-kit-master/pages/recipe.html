@@ -1,0 +1,290 @@
+<!--
+=========================================================
+Material Kit - v2.0.7
+=========================================================
+
+Product Page: https://www.creative-tim.com/product/material-kit
+Copyright 2020 Creative Tim (https://www.creative-tim.com/)
+
+Coded by Creative Tim
+
+=========================================================
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png" />
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Material Kit by Creative Tim</title>
+    <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport" />
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <!-- CSS Files -->
+    <link href="../assets/css/material-kit.css?v=2.0.7" rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="../assets/demo/demo.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="js/api.js" type="text/javascript"></script>
+</head>
+
+<body class="landing-page sidebar-collapse">
+    <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100"
+        id="sectionsNav">
+        <div class="container">
+            <div class="navbar-translate">
+                <a class="navbar-brand" href="https://demos.creative-tim.com/material-kit/index.html">
+                    Cook and Connect
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-header header-filter" data-parallax="true" style="
+        background-image: url('../assets/img/maarten-van-den-heuvel-EzH46XCDQRY-unsplash.jpg');
+      ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="title">Choose a Recipe</h1>
+                    <h4>
+                        You will be matched with a person based on the recipe you choose!
+                    </h4>
+                    <div class="filter">
+                        <div class="card text-center" style="width: 20rem">
+                            <div class="card-body card-row">
+                                <h4>Filter By:</h4>
+                                <select class="dropdown">
+                                    <div class="dropdown-toggle" href="javascript:;" id="navbarDropdownMenuLink"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Chose
+                                    </div>
+
+                                    <option class="dropdown-item" href="javascript:;">Cuisine</option>
+                                    <option class="dropdown-item" href="javascript:;">
+                                        Ingredients
+                                    </option>
+                                    <option class="dropdown-item" href="javascript:;">
+                                        Cooking Time
+                                    </option>
+                                </select>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <select
+                      class="dropdown-menu"
+                      aria-labelledby="navbarDropdownMenuLink"
+                      onchange="showMenu(this.value)"
+                    >
+                      <option class="dropdown-item" href="javascript:;" value="cuisine">
+                        Cuisine
+                      <option class="dropdown-item" href="javascript:;" value="ingredients">
+                        Ingredients
+                      <option class="dropdown-item" href="javascript:;" value="time">
+                        Cooking Time
+                    </select>
+                  </div>
+                </div>
+                <br>
+                <div class="row filter_results" id="cuisine">
+                    <div class="dropdown_menu_items">
+                        <button class="btn btn-primary btn-fab btn-lg btn-round" onclick="getSearchByCuisine('Italian')">
+                            <i class="food_type_icon"></i>
+                        </button>
+                        <p>Italian</p>
+                    </div>
+                    <div class="dropdown_menu_items">
+                        <button class="btn btn-primary btn-fab btn-lg btn-round" onclick="getSearchByCuisine('American')">
+                            <i class="food_type_icon"></i>
+                        </button>
+                        <p>American</p>
+                    </div>
+                    <div class="dropdown_menu_items">
+                        <button class="btn btn-primary btn-fab btn-lg btn-round" onclick="getSearchByCuisine('Mexican')">
+                            <i class="food_type_icon"></i>
+                        </button>
+                        <p>Mexican</p>
+                    </div>
+                    <div class="dropdown_menu_items">
+                        <button class="btn btn-primary btn-fab btn-lg btn-round" onclick="getSearchByCuisine('Greek')">
+                            <i class="food_type_icon"></i>
+                        </button>
+                        <p>Greek</p>
+                    </div>
+                    <div class="dropdown_menu_items">
+                        <button class="btn btn-primary btn-fab btn-lg btn-round" onclick="getSearchByCuisine('Japanese')">
+                            <i class="food_type_icon"></i>
+                        </button>
+                        <p>Japanese</p>
+                    </div>
+                    <div class="dropdown_menu_items">
+                        <button class="btn btn-primary btn-fab btn-lg btn-round" onclick="getSearchByCuisine('Chinese')">
+                            <i class="food_type_icon"></i>
+                        </button>
+                        <p>Chinese</p>
+                    </div>
+                    <div class="dropdown_menu_items">
+                        <button class="btn btn-primary btn-fab btn-lg btn-round" onclick="getSearchByCuisine('Eastern European')">
+                            <i class="food_type_icon"></i>
+                        </button>
+                        <p>Eastern European</p>
+                    </div>
+                    <div class="dropdown_menu_items">
+                        <button class="btn btn-primary btn-fab btn-lg btn-round" onclick="getSearchByCuisine('Mediterranean')">
+                            <i class="food_type_icon"></i>
+                        </button>
+                        <p>Mediterranean</p>
+                    </div>
+                    <div class="dropdown_menu_items">
+                        <button class="btn btn-primary btn-fab btn-lg btn-round" onclick="getSearchByCuisine('French')">
+                            <i class="food_type_icon"></i>
+                        </button>
+                        <p>French</p>
+                    </div>
+                    <div class="dropdown_menu_items">
+                        <button class="btn btn-primary btn-fab btn-lg btn-round" onclick="getSearchByCuisine('Caribbean')">
+                            <i class="food_type_icon"></i>
+                        </button>
+                        <p>Caribbean</p>
+                    </div>
+                </div>
+                <div class="row filter_results" id="time">
+                    <div class="dropdown_menu_items">
+                        <button class="btn btn-primary btn-fab btn-lg btn-round" onclick="getSearchByCuisine('Italian')">
+                            <i class="food_type_icon"><15</i>
+                        </button>
+                        <p>Short</p>
+                    </div>
+                    <div class="dropdown_menu_items">
+                        <button class="btn btn-primary btn-fab btn-lg btn-round" onclick="getSearchByCuisine('Italian')">
+                            <i class="food_type_icon"><25</i>
+                        </button>
+                        <p>Medium</p>
+                    </div>
+                    <div class="dropdown_menu_items">
+                        <button class="btn btn-primary btn-fab btn-lg btn-round" onclick="getSearchByCuisine('Italian')">
+                            <i class="food_type_icon">25+</i>
+                        </button>
+                        <p>Long</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="main main-raised">
+      <div class="container">
+        <div class="section text-center">
+          <div class="row">
+            <div class="col-md-12 ml-auto mr-auto">
+              <h2 class="title">Recipes</h2>
+              <h5 class="description">Choose your favourite!</h5>
+              <div id="recipe-list" class="recipe-list"></div>
+              <script>
+                getSearch();
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="featured-recipe">
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModalLong"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" id="modal-body"></div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <a href="./connect.html">
+                <button type="button" class="btn btn-primary">
+                    Choose
+                </button>
+              </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer footer-default">
+        <div class="container">
+            <nav class="float-left">
+                <ul>
+                    <li>
+                        <a href="https://www.creative-tim.com/"> Creative Tim </a>
+                    </li>
+                    <li>
+                        <a href="https://www.creative-tim.com/presentation"> About Us </a>
+                    </li>
+                    <li>
+                        <a href="https://www.creative-tim.com/blog"> Blog </a>
+                    </li>
+                    <li>
+                        <a href="https://www.creative-tim.com/license"> Licenses </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="copyright float-right">
+                &copy;
+                <script>
+                    document.write(new Date().getFullYear());
+                </script>
+                , made with <i class="material-icons">favorite</i> by
+                <a href="https://www.creative-tim.com/" target="_blank">Creative Tim</a>
+                for a better web.
+            </div>
+        </div>
+    </footer>
+    <!--   Core JS Files   -->
+    <script src="../assets/js/core/jquery.min.js" type="text/javascript"></script>
+    <script src="../assets/js/core/popper.min.js" type="text/javascript"></script>
+    <script src="../assets/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
+    <script src="../assets/js/plugins/moment.min.js"></script>
+    <!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
+    <script src="../assets/js/plugins/bootstrap-datetimepicker.js" type="text/javascript"></script>
+    <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+    <script src="../assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+    <!--  Google Maps Plugin    -->
+    <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
+    <script src="../assets/js/material-kit.js?v=2.0.7" type="text/javascript"></script>
+</body>
+
+</html>

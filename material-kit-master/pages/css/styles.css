@@ -1,0 +1,95 @@
+.filter {
+    display: flex;
+    width: 15vw;
+    justify-content: space-between;
+}
+
+.recipe-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.recipe-list .card {
+    margin: 2%;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.restrictions {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0 !important;
+}
+
+.restrictions li {
+    margin: 0 5px;
+}
+
+.green {
+    color: green
+}
+
+.red {
+    color: red;
+}
+
+.left ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start !important;
+    text-align: left !important;
+}
+
+#cusine {
+    display: none;
+}
+
+.filter_results{
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.btn.btn-primary.btn-fab.btn-lg.btn-round{
+    height:80px;
+    width: 80px;
+    text-align: center;
+}
+
+.dropdown_menu_items{
+    text-align: center;
+    width: 200px;
+}
+
+.card-title {
+    margin: auto 0 !important;
+}
+
+.card-rows {
+    display: flex;
+}
+
+.page-rows {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.dropdown {
+    outline: none;
+    border: none;
+    font-size: 18px;
+}
+
+.card-row {
+    display: flex;
+    justify-content: space-around;
+}
+
+#ingredients, #time {
+    display: none;
+}
