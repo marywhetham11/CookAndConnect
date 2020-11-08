@@ -45,13 +45,14 @@
     justify-content: flex-start !important;
     text-align: left !important;
 }
-#cusine{
+
+#cusine {
     display: none;
 }
 
 .filter_results{
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .btn.btn-primary.btn-fab.btn-lg.btn-round{
@@ -78,4 +79,18 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+.dropdown {
+    outline: none;
+    border: none;
+    font-size: 18px;
+}
+
+.card-row {
+    display: flex;
+    justify-content: space-around;
+}
+
+#ingredients, #time {
+    display: none;
 }

@@ -62,11 +62,10 @@ The above copyright notice and this permission notice shall be included in all c
                     <h4>
                         You will be matched with a person based on the recipe you choose!
                     </h4>
-                    <br />
                     <div class="filter">
-                        <h4>Filter By:</h4>
-                        <div class="card text-center" style="width: 12rem">
-                            <div class="card-body">
+                        <div class="card text-center" style="width: 20rem">
+                            <div class="card-body card-row">
+                                <h4>Filter By:</h4>
                                 <select class="dropdown">
                                     <div class="dropdown-toggle" href="javascript:;" id="navbarDropdownMenuLink"
                                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -85,71 +84,109 @@ The above copyright notice and this permission notice shall be included in all c
                             </div>
                         </div>
                     </div>
-<<<<<<< Updated upstream
                     <select
                       class="dropdown-menu"
                       aria-labelledby="navbarDropdownMenuLink"
+                      onchange="showMenu(this.value)"
                     >
-                      <option class="dropdown-item" href="javascript:;">
+                      <option class="dropdown-item" href="javascript:;" value="cuisine">
                         Cuisine
-                      </option>
-                      <option class="dropdown-item" href="javascript:;">
+                      <option class="dropdown-item" href="javascript:;" value="ingredients">
                         Ingredients
-                      </option>
-                      <option class="dropdown-item" href="javascript:;">
+                      <option class="dropdown-item" href="javascript:;" value="time">
                         Cooking Time
-                      </option>
                     </select>
                   </div>
-=======
->>>>>>> Stashed changes
+                </div>
+                <br>
+                <div class="row filter_results" id="cuisine">
+                    <div class="dropdown_menu_items">
+                        <button class="btn btn-primary btn-fab btn-lg btn-round" onclick="getSearchByCuisine('Italian')">
+                            <i class="food_type_icon"></i>
+                        </button>
+                        <p>Italian</p>
+                    </div>
+                    <div class="dropdown_menu_items">
+                        <button class="btn btn-primary btn-fab btn-lg btn-round" onclick="getSearchByCuisine('American')">
+                            <i class="food_type_icon"></i>
+                        </button>
+                        <p>American</p>
+                    </div>
+                    <div class="dropdown_menu_items">
+                        <button class="btn btn-primary btn-fab btn-lg btn-round" onclick="getSearchByCuisine('Mexican')">
+                            <i class="food_type_icon"></i>
+                        </button>
+                        <p>Mexican</p>
+                    </div>
+                    <div class="dropdown_menu_items">
+                        <button class="btn btn-primary btn-fab btn-lg btn-round" onclick="getSearchByCuisine('Greek')">
+                            <i class="food_type_icon"></i>
+                        </button>
+                        <p>Greek</p>
+                    </div>
+                    <div class="dropdown_menu_items">
+                        <button class="btn btn-primary btn-fab btn-lg btn-round" onclick="getSearchByCuisine('Japanese')">
+                            <i class="food_type_icon"></i>
+                        </button>
+                        <p>Japanese</p>
+                    </div>
+                    <div class="dropdown_menu_items">
+                        <button class="btn btn-primary btn-fab btn-lg btn-round" onclick="getSearchByCuisine('Chinese')">
+                            <i class="food_type_icon"></i>
+                        </button>
+                        <p>Chinese</p>
+                    </div>
+                    <div class="dropdown_menu_items">
+                        <button class="btn btn-primary btn-fab btn-lg btn-round" onclick="getSearchByCuisine('Eastern European')">
+                            <i class="food_type_icon"></i>
+                        </button>
+                        <p>Eastern European</p>
+                    </div>
+                    <div class="dropdown_menu_items">
+                        <button class="btn btn-primary btn-fab btn-lg btn-round" onclick="getSearchByCuisine('Mediterranean')">
+                            <i class="food_type_icon"></i>
+                        </button>
+                        <p>Mediterranean</p>
+                    </div>
+                    <div class="dropdown_menu_items">
+                        <button class="btn btn-primary btn-fab btn-lg btn-round" onclick="getSearchByCuisine('French')">
+                            <i class="food_type_icon"></i>
+                        </button>
+                        <p>French</p>
+                    </div>
+                    <div class="dropdown_menu_items">
+                        <button class="btn btn-primary btn-fab btn-lg btn-round" onclick="getSearchByCuisine('Caribbean')">
+                            <i class="food_type_icon"></i>
+                        </button>
+                        <p>Caribbean</p>
+                    </div>
+                </div>
+                <div class="row filter_results" id="time">
+                    <div class="dropdown_menu_items">
+                        <button class="btn btn-primary btn-fab btn-lg btn-round" onclick="getSearchByCuisine('Italian')">
+                            <i class="food_type_icon"><15</i>
+                        </button>
+                        <p>Short</p>
+                    </div>
+                    <div class="dropdown_menu_items">
+                        <button class="btn btn-primary btn-fab btn-lg btn-round" onclick="getSearchByCuisine('Italian')">
+                            <i class="food_type_icon"><25</i>
+                        </button>
+                        <p>Medium</p>
+                    </div>
+                    <div class="dropdown_menu_items">
+                        <button class="btn btn-primary btn-fab btn-lg btn-round" onclick="getSearchByCuisine('Italian')">
+                            <i class="food_type_icon">25+</i>
+                        </button>
+                        <p>Long</p>
+                    </div>
                 </div>
             </div>
-            <div class="row filter_results" >
-                <div class="dropdown_menu_items">
-                    <button class="btn btn-primary btn-fab btn-lg btn-round">
-                        <i class="food_type_icon"><15</i>
-                    </button>
-                    <p>Short</p>
-                </div>
-                <div class="dropdown_menu_items">
-                    <button class="btn btn-primary btn-fab btn-lg btn-round">
-                        <i class="food_type_icon">15-25</i>
-                    </button>
-                    <p>Medium</p>
-                </div>
-                <div class="dropdown_menu_items">
-                    <button class="btn btn-primary btn-fab btn-lg btn-round">
-                        <i class="food_type_icon">25+</i>
-                    </button>
-                    <p>Long</p>
-                </div>
-            </div>
-            <div class="row filter_results" id="cusine">
-                <div class="dropdown_menu_items">
-                    <button class="btn btn-primary btn-fab btn-lg btn-round">
-                        <i class="food_type_icon"><15</i>
-                    </button>
-                    <p>Short</p>
-                </div>
-                <div class="dropdown_menu_items">
-                    <button class="btn btn-primary btn-fab btn-lg btn-round">
-                        <i class="food_type_icon">15-25</i>
-                    </button>
-                    <p>Medium</p>
-                </div>
-                <div class="dropdown_menu_items">
-                    <button class="btn btn-primary btn-fab btn-lg btn-round">
-                        <i class="food_type_icon">25+</i>
-                    </button>
-                    <p>Long</p>
-                </div>
-            </div>
+            
         </div>
     </div>
 
     <div class="main main-raised">
-<<<<<<< Updated upstream
       <div class="container">
         <div class="section text-center">
           <div class="row">
@@ -198,25 +235,11 @@ The above copyright notice and this permission notice shall be included in all c
               >
                 Close
               </button>
-              <button type="button" class="btn btn-primary">
-                Choose
-              </button>
-=======
-        <div class="container">
-            <div class="section text-center">
-                <div class="row">
-                    <div class="col-md-8 ml-auto mr-auto">
-                        <h2 class="title">Recipes</h2>
-                        <h5 class="description">
-                            This is the paragraph where you can write more details about
-                            your product. Keep you user engaged by providing meaningful
-                            information. Remember that by this time, the user is curious,
-                            otherwise he wouldn&apos;t scroll to get here. Add a button if
-                            you want the user to see more.
-                        </h5>
-                    </div>
-                </div>
->>>>>>> Stashed changes
+              <a href="./connect.html">
+                <button type="button" class="btn btn-primary">
+                    Choose
+                </button>
+              </a>
             </div>
         </div>
     </div>
