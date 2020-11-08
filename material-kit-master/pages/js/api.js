@@ -3,7 +3,6 @@ function getSearch () {
     .then(response => response.json())
     .then(data => {
         for (let i = 0; i < data.results.length; i++) {
-            console.log("hello");
             document.getElementById("recipe-list").innerHTML += `
             <div class="card" style="width: 20rem" onclick="showRecipe(` + data.results[i].id + `)">
                 <img
@@ -20,6 +19,73 @@ function getSearch () {
         }
         console.log(data);
     });
+}
+
+function getSearchByCuisine (cuisine) {
+    fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=062bee0bbff44fc1a7cda265d91e1382&cuisine=' + cuisine)
+    .then(response => response.json())
+    .then(data => {
+        var body = '';
+        for (let i = 0; i < data.results.length; i++) {
+            body += `
+            <div class="card" style="width: 20rem" onclick="showRecipe(` + data.results[i].id + `)">
+                <img
+                  class="card-img-top"
+                  src=` + data.results[i].image + `
+                  rel="nofollow"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <p class="card-text">` + data.results[i].title + `
+                  </p>
+                </div>
+            </div>`
+        }
+        document.getElementById("recipe-list").innerHTML = body;
+        console.log(data);
+    });
+}
+
+function getSearchByTime (time) {
+    fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=062bee0bbff44fc1a7cda265d91e1382&cuisine=' + time)
+    .then(response => response.json())
+    .then(data => {
+        var body = '';
+        for (let i = 0; i < data.results.length; i++) {
+            body += `
+            <div class="card" style="width: 20rem" onclick="showRecipe(` + data.results[i].id + `)">
+                <img
+                  class="card-img-top"
+                  src=` + data.results[i].image + `
+                  rel="nofollow"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <p class="card-text">` + data.results[i].title + `
+                  </p>
+                </div>
+            </div>`
+        }
+        document.getElementById("recipe-list").innerHTML = body;
+        console.log(data);
+    });
+}
+
+function showMenu(type) {
+    console.log('hi');
+    if (type === 'cuisine') {
+        document.getElementById("cuisine").style.display = "block";
+        document.getElementById("ingredients").style.display = "none";
+        document.getElementById("time").style.display = "none";
+    } else if (type === 'ingredient') {
+        document.getElementById("cuisine").style.display = "none";
+        document.getElementById("ingredients").style.display = "block";
+        document.getElementById("time").style.display = "none";
+    } else if (type === 'time') {
+        document.getElementById("cuisine").style.display = "none";
+        document.getElementById("ingredients").style.display = "none";
+        document.getElementById("time").style.display = "time";
+    }
 }
 
 function showRecipe(recipeId) {
@@ -42,7 +108,7 @@ function showRecipe(recipeId) {
             <li>` + symbol(data.glutenFree) + ` Dairy-Free</li>
             <li>` + symbol(data.dairyFree) + ` Gluten-Free</li>
         </ul>
-        <h5>Ready In: ` + data.readyInMinutes + `</h5>
+        <h5>Ready In: ` + data.readyInMinutes + ` minutes</h5>
         <div class="left">
         <h5>Ingredients:</h5>
         <ul>
