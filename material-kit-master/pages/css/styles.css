@@ -4,6 +4,44 @@
     justify-content: space-between;
 }
 
-.dropdown {
-    
+.recipe-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.recipe-list .card {
+    margin: 2%;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.restrictions {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0 !important;
+}
+
+.restrictions li {
+    margin: 0 5px;
+}
+
+.green {
+    color: green
+}
+
+.red {
+    color: red;
+}
+
+.left ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start !important;
+    text-align: left !important;
 }
