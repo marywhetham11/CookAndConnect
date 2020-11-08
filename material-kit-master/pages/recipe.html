@@ -19,7 +19,7 @@ The above copyright notice and this permission notice shall be included in all c
     <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png" />
     <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Material Kit by Creative Tim</title>
+    <title>CookNConnect</title>
     <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport" />
     <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css"
@@ -39,7 +39,7 @@ The above copyright notice and this permission notice shall be included in all c
         <div class="container">
             <div class="navbar-translate">
                 <a class="navbar-brand" href="https://demos.creative-tim.com/material-kit/index.html">
-                    Cook and Connect
+                    CookNConnect
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -66,17 +66,17 @@ The above copyright notice and this permission notice shall be included in all c
                         <div class="card text-center" style="width: 20rem">
                             <div class="card-body card-row">
                                 <h4>Filter By:</h4>
-                                <select class="dropdown">
+                                <select class="dropdown" onchange="showMenu(this.value);">
                                     <div class="dropdown-toggle" href="javascript:;" id="navbarDropdownMenuLink"
                                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Chose
+                                        Choose
                                     </div>
 
-                                    <option class="dropdown-item" href="javascript:;">Cuisine</option>
-                                    <option class="dropdown-item" href="javascript:;">
+                                    <option class="dropdown-item" href="javascript:;" value="cuisine">Cuisine</option>
+                                    <option class="dropdown-item" href="javascript:;" value="ingredients">
                                         Ingredients
                                     </option>
-                                    <option class="dropdown-item" href="javascript:;">
+                                    <option class="dropdown-item" href="javascript:;" value="time">
                                         Cooking Time
                                     </option>
                                 </select>
@@ -84,18 +84,6 @@ The above copyright notice and this permission notice shall be included in all c
                             </div>
                         </div>
                     </div>
-                    <select
-                      class="dropdown-menu"
-                      aria-labelledby="navbarDropdownMenuLink"
-                      onchange="showMenu(this.value)"
-                    >
-                      <option class="dropdown-item" href="javascript:;" value="cuisine">
-                        Cuisine
-                      <option class="dropdown-item" href="javascript:;" value="ingredients">
-                        Ingredients
-                      <option class="dropdown-item" href="javascript:;" value="time">
-                        Cooking Time
-                    </select>
                   </div>
                 </div>
                 <br>
@@ -161,21 +149,53 @@ The above copyright notice and this permission notice shall be included in all c
                         <p>Caribbean</p>
                     </div>
                 </div>
+                <div class="row filter_results" id="ingredients">
+                    <div class="dropdown_menu_items">
+                        <button class="btn btn-primary btn-fab btn-lg btn-round" onclick="getSearchByIngredient('Chicken')">
+                            <i class="food_type_icon"></i>
+                        </button>
+                        <p>Chicken</p>
+                    </div>
+                    <div class="dropdown_menu_items">
+                        <button class="btn btn-primary btn-fab btn-lg btn-round" onclick="getSearchByIngredient('Beef')">
+                            <i class="food_type_icon"></i>
+                        </button>
+                        <p>Beef</p>
+                    </div>
+                    <div class="dropdown_menu_items">
+                        <button class="btn btn-primary btn-fab btn-lg btn-round" onclick="getSearchByIngredient('Pasta')">
+                            <i class="food_type_icon"></i>
+                        </button>
+                        <p>Pasta</p>
+                    </div>
+                    <div class="dropdown_menu_items">
+                        <button class="btn btn-primary btn-fab btn-lg btn-round" onclick="getSearchByIngredient('Beans')">
+                            <i class="food_type_icon"></i>
+                        </button>
+                        <p>Beans</p>
+                    </div>
+                    <div class="dropdown_menu_items">
+                        <button class="btn btn-primary btn-fab btn-lg btn-round" onclick="getSearchByIngredient('Cheese')">
+                            <i class="food_type_icon"></i>
+                        </button>
+                        <p>Cheese</p>
+                    </div>
+                </div>
                 <div class="row filter_results" id="time">
                     <div class="dropdown_menu_items">
-                        <button class="btn btn-primary btn-fab btn-lg btn-round" onclick="getSearchByCuisine('Italian')">
+                        <button class="btn btn-primary btn-fab btn-lg btn-round" onclick="getSearchByTime('15')">
                             <i class="food_type_icon"><15</i>
                         </button>
                         <p>Short</p>
                     </div>
                     <div class="dropdown_menu_items">
-                        <button class="btn btn-primary btn-fab btn-lg btn-round" onclick="getSearchByCuisine('Italian')">
+                        <button class="btn btn-primary btn-fab btn-lg btn-round" onclick="getSearchByTime('25')">
                             <i class="food_type_icon"><25</i>
                         </button>
                         <p>Medium</p>
                     </div>
                     <div class="dropdown_menu_items">
-                        <button class="btn btn-primary btn-fab btn-lg btn-round" onclick="getSearchByCuisine('Italian')">
+                        <button class="btn btn-primary btn-fab btn-lg btn-round" onclick="getSearch()" >
                             <i class="food_type_icon">25+</i>
                         </button>
                         <p>Long</p>

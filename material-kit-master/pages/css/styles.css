@@ -46,10 +46,6 @@
     text-align: left !important;
 }
 
-#cusine {
-    display: none;
-}
-
 .filter_results{
     flex-direction: row;
     justify-content: space-between;
@@ -92,4 +88,28 @@
 
 #ingredients, #time {
     display: none;
+}
+
+.recipe-block {
+    text-align: left;
+}
+
+.food-image {
+    max-width: 15vw;
+    object-fit: cover;
+}
+
+.map-image {
+    max-width: 25vw;
+    object-fit: cover;
+}
+
+.instructions {
+    width: 20vw;
+}
+
+.chat {
+    width: 75vw;
+    height: 25vh;
+    border: 1px solid black;
 }
