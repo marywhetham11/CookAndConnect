@@ -4,6 +4,7 @@
     justify-content: space-between;
 }
 
+<<<<<<< Updated upstream
 .recipe-list {
     display: flex;
     flex-wrap: wrap;
@@ -44,4 +45,27 @@
     flex-direction: column;
     justify-content: flex-start !important;
     text-align: left !important;
+=======
+#cusine{
+    display: none;
+}
+
+.filter_results{
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.btn.btn-primary.btn-fab.btn-lg.btn-round{
+    height:80px;
+    width: 80px;
+    text-align: center;
+}
+
+.dropdown_menu_items{
+    text-align: center;
+    width: 200px;
+}
+.dropdown {
+    
+>>>>>>> Stashed changes
 }
